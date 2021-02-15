@@ -8,7 +8,7 @@ import argparse
 import os
 import cueparse
 
-_VERSION = "1.0.0"
+_VERSION = "1.1.0"
 
 '''
     Entry point to script. This is not designed to be imported into another
