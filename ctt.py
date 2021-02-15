@@ -15,11 +15,9 @@ _VERSION = "1.0.0"
     script. Alert the user if this happens.
 '''
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Convert a .cue file into a text tracklist')
-    required_args = parser.add_argument_group('required arguments')
-    required_args.add_argument('-f', '--file', help='The .cue file to convert to tracklist', required=True)
-    optional_args = parser.add_argument_group('optional arguments')
-    args = parser.parse_args()
+    p = argparse.ArgumentParser(description='Convert a .cue file into a text tracklist (v{0})'.format(_VERSION))
+    p.add_argument("directory", help="recursively search this directory for .cue files to translate")
+    args = p.parse_args()
 
     print("\r\n>> ctt.py —— Xander Jones —— v" + _VERSION)
 
